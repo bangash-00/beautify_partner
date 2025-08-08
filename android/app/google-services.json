@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "866872491254",
+    "project_id": "beautify-4ec6b",
+    "storage_bucket": "beautify-4ec6b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866872491254:android:4aeb1f807c892b24fd00d7",
+        "android_client_info": {
+          "package_name": "com.beautify.partner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866872491254-aod59j01or99pbl3i5dojsukb3828tij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beautify.partner",
+            "certificate_hash": "aeb831bb5c6361a1c0ea51e6740c0842d1887c3a"
+          }
+        },
+        {
+          "client_id": "866872491254-1iq8cneh10mp5t258rqb3r26eutbgipu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFfyMbs8UU0agCRsY1mU2WFHQos9ad0lc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866872491254-1iq8cneh10mp5t258rqb3r26eutbgipu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "866872491254-8kgced3ed6rvi0sethlg39fve865t3s9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.beautify.partner"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

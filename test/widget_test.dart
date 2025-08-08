@@ -1,30 +1,27 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
+import 'package:beautify_partner/view/splash/splash_view.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:beautify_partner/main.dart';
+import 'package:get/get.dart';
+import 'package:beautify_partner/routes/app_pages.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Splash screen loads and navigates', (WidgetTester tester) async {
+    // Build the app
+    await tester.pumpWidget(
+      GetMaterialApp(
+        initialRoute: AppPages.initial,
+        getPages: AppPages.routes,
+      ),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that SplashView is shown
+    expect(find.byType(SplashView), findsOneWidget);
+    expect(find.text('Beautify Partner'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Wait for the splash delay (3 seconds)
+    await tester.pump(const Duration(seconds: 3));
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that it navigates to the Home screen
+    expect(find.text('Home'), findsOneWidget); // Adjust based on your HomeView
   });
 }

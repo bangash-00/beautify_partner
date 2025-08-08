@@ -1,4 +1,4 @@
-package com.beautyfy.partner.beautify_partner
+package com.beautify.partner
 
 import io.flutter.embedding.android.FlutterActivity
 
